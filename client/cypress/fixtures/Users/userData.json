@@ -1,0 +1,17 @@
+{
+    "userLogin":{
+      "email": "admin@test.com",
+      "password": "test123"
+    },
+    "failLogin":{
+      "email": "teste@teste.com",
+      "password": "testando123"
+    },
+    "newHero":{
+      "name": "testName2",
+      "price": "1000",
+      "fans": "500",
+      "saves": "10",
+      "powers": ["Flying", "Invisibility"]
+    }
+}
