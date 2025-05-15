@@ -13,5 +13,12 @@
       "fans": "500",
       "saves": "10",
       "powers": ["Flying", "Invisibility"]
+    },
+    "editHero":{
+      "name": "editedHero",
+      "price": "2000",
+      "fans": "500",
+      "saves": "50",
+      "powers": ["Fireball", "Telekinesis"]
     }
 }
