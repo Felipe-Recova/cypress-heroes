@@ -35,7 +35,7 @@
 //     }
 //   }
 // }
-
+import 'cypress-file-upload'
 import Prisma from '@prisma/client';
 
 declare global {

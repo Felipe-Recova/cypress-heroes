@@ -10,7 +10,8 @@ class EditHeroPage{
             powersSelect: "[data-cy='powersSelect']", 
             submitNewHeroButton: "button[class*='bg-blue-700']",
             HeroNameTitle: "[data-cy='name']",
-            deleteHeroButton: "button.bg-red-600"
+            deleteHeroButton: "button.bg-red-600",
+            avatarFileInput: '[data-cy="avatarFile"]'
         }
         return selectors
     }
@@ -27,6 +28,12 @@ class EditHeroPage{
         if (powers.length > 0) {
             cy.get(this.selectorsList().powersSelect).select(powers)
         }
+        cy.get(this.selectorsList().avatarFileInput).attachFile('images/shrek.png')
+        cy.get(this.selectorsList().avatarFileInput).then(($input) => {
+            const file = $input[0].files[0]
+            expect(file).to.exist
+            expect(file.name).to.eq('shrek.png')
+        })
         cy.get(this.selectorsList().submitNewHeroButton).contains("Submit").click()
     }
 }
